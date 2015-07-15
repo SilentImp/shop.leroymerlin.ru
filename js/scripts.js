@@ -20,7 +20,10 @@ Item = (function() {
     this.links = this.list.find('.item__brief');
     this.list.isotope({
       itemSelector: '.item',
-      layoutMode: 'masonry'
+      layoutMode: 'packery',
+      packery: {
+        gutter: 10
+      }
     });
     this.links.on('click', this.size);
   }
