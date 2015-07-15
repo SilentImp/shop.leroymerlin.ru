@@ -9,17 +9,36 @@ $(document).ready(function() {
   });
 });
 
-var Item;
+var Item,
+  bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 Item = (function() {
   function Item() {
-    $('.item__list').isotope({
-      itemSelector: '.grid-item',
-      masonry: {
-        columnWidth: 295
-      }
+    this.size = bind(this.size, this);
+    this.list = $('.item__list');
+    this.items = this.list.find('.item');
+    this.links = this.list.find('.item__brief');
+    this.list.isotope({
+      itemSelector: '.item',
+      layoutMode: 'masonry'
     });
+    this.links.on('click', this.size);
   }
+
+  Item.prototype.size = function(event) {
+    var block;
+    event.preventDefault();
+    block = $(event.currentTarget.parentNode);
+    this.items.css({
+      width: 295,
+      height: 380
+    });
+    block.css({
+      width: 905,
+      height: 770
+    });
+    return $('.item__list').isotope('layout');
+  };
 
   return Item;
 
