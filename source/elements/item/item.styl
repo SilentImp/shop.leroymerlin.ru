@@ -1,0 +1,147 @@
+@import "../../helpers/*"
+
+
+.item
+  &_low
+    .item__brief
+      border-top 1px solid $red
+      &:after
+        content ""
+        display block
+        position absolute
+        top 0
+        right 160px
+        border-color transparent $red transparent transparent
+        border-width 0 20px 20px 0
+        border-style solid
+        height 0
+        width 0
+        overflow hidden
+      &:before
+        white-space nowrap
+        content "низкие цены каждый день!"
+        width 140px
+        background-color $red
+        color $yellow
+        position absolute
+        top 0
+        right 0
+        font-size 9px
+        text-transform uppercase
+        padding 0 10px
+        line-height 20px
+
+  &_best
+    .item__brief
+      border-top 1px solid $yellow
+      &:after
+        content ""
+        display block
+        position absolute
+        top 0
+        right 160px
+        border-color transparent $yellow transparent transparent
+        border-width 0 20px 20px 0
+        border-style solid
+        height 0
+        width 0
+        overflow hidden
+      &:before
+        white-space nowrap
+        content "лучшая цена!"
+        width 140px
+        background-color $yellow
+        color $black
+        position absolute
+        top 0
+        right 0
+        font-size 9px
+        text-transform uppercase
+        padding 0 10px
+        line-height 20px
+
+  &_limited
+    .item__brief:after
+      content ""
+      display block
+      position absolute
+      top 0
+      right 160px
+      border-color transparent $black transparent transparent
+      border-width 0 20px 20px 0
+      border-style solid
+      height 0
+      width 0
+      overflow hidden
+    .item__brief:before
+      white-space nowrap
+      content "предложение ограничено!"
+      width 140px
+      background-color $black
+      color $yellow
+      position absolute
+      top 0
+      right 0
+      font-size 9px
+      text-transform uppercase
+      padding 0 10px
+      line-height 20px
+
+  &__price
+    clear both
+    border-top 1px solid $dark-white
+    text-align center
+    line-height 55px
+    font-size 13px
+    strong
+      font-size 26px
+      font-weight bold
+  &__brief
+    text-decoration none
+    color $black
+    position relative
+    width 295px
+    height 379px
+    border-top 1px solid $black
+    margin 0 10px 10px 0
+    float left
+    background $white
+    padding 20px
+    box-sizing border-box
+  &__title
+    font-size 14px
+    line-height 17px
+    color $mid-grey
+    margin 0 0 17px
+  &__comments
+    float left
+    font-size 13px
+    color $grey
+    line-height 17px
+    margin 0 0 17px
+    strong
+      color $green
+      font-weight normal
+  &__articul
+    float right
+    font-size 13px
+    color $grey
+    line-height 17px
+    margin 0 0 17px
+    strong
+      font-weight bold
+      color $black
+  &__photo
+    margin auto
+    vertical-align middle
+    display inline-block
+    &-wrapper
+      height 200px
+      width 255px
+      text-align center
+      line-height 200px
+  &__list
+    position relative
+    width 1220px
+    margin 0 0 40px
+    clearit()

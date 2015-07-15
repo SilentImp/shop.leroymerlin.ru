@@ -1,0 +1,37 @@
+@import "../../helpers/*"
+
+.title
+  position relative
+  border-top 1px solid $black
+  color $white
+  font-family Arial, Helvetica, sans-serif
+  text-transform uppercase
+  margin 30px 0 20px
+  span
+    background-color $black
+    line-height 40px
+    height 40px
+    display inline-block
+    white-space no-wrap
+    padding 0 20px
+    min-width 220px
+    position relative
+    &:after
+      content ""
+      display block
+      width 0
+      height 0
+      overflow hidden
+      position absolute
+      top 0
+      left 100%
+      border-style solid
+      border-width 0 0 40px 40px
+      border-color transparent transparent transparent $black
+  &_type
+    &_best
+      border-color $green
+      span
+        background-color $green
+        &:after
+          border-left-color $green

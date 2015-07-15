@@ -1,0 +1,61 @@
+@import "../../helpers/*"
+
+
+.information
+  clearit()
+  clear both
+  padding 40px 0 0
+  &__column
+    width 50%
+    padding 0 0 0 10px
+    box-sizing border-box
+    float left
+    &:first-child
+      padding 0 10px 0 0
+  &__section
+    margin 0 0 20px
+    &_open
+      .information__body
+        display block
+  &__body
+    display none
+
+    background-color $white
+    padding 10px 30px 30px
+    font-size 14px
+    line-height 20px
+    color $mid-grey
+
+    p
+      margin 20px 0
+  &__subtitle
+    font-size 16px
+    line-height 20px
+    font-weight bold
+    margin 20px 0
+  &__header
+    background url("../images/info-bg.jpg") 0px 0px no-repeat
+    background-size cover
+    padding 10px
+    transition box-shadow .25s
+    box-shadow inset 0 0 0 1000px rgba($green, 1)
+    cursor: pointer
+    &:hover
+      box-shadow inset 0 0 0 1000px rgba($green, 0)
+      .information__title
+        border-color $yellow
+  &__title
+    border 2px solid $white
+    padding 16px 20px
+    line-height 44px
+    height 44px
+    color $white
+    transitio border-color .25s
+    span
+      line-height 22px
+      vertical-align middle
+      display inline-block
+
+  &__toggle
+    position absolute
+    display none
