@@ -3,7 +3,11 @@ class Item
     @list = $ '.item__list'
     @items = @list.find '.item'
     @links = @list.find '.item__brief'
-
+    @wrappers = $ '.item__full-statistics'
+    for scroll in @wrappers
+      new IScroll scroll,
+        mouseWheel: true
+        scrollbars: 'custom'
     @list.isotope
       itemSelector: '.item'
       layoutMode: 'packery'

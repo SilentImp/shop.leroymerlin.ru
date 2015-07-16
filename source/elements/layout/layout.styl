@@ -18,6 +18,34 @@ html, body
     width 1220px
     margin 0 auto
 
+
+.iScrollVerticalScrollbar
+	position absolute
+	z-index 9999
+	width 7px
+	bottom 0
+	top 2px
+	right 2px
+	overflow hidden
+
+.iScrollVerticalScrollbar.iScrollLoneScrollbar
+  box-shadow inset -3px 0 0 0 $white, inset -4px 0 0 0 $mid-white
+  right 0
+
+.iScrollVerticalScrollbar.iScrollBothScrollbars
+	bottom 0
+  .iScrollIndicator
+    width 7px
+
+.iScrollIndicator
+	position absolute
+	background $green
+	border-radius 4px
+
+.iScrollVerticalScrollbar .iScrollIndicator
+	width 100%
+
+
 @media (max-width: 1220px)
   html body .main
     .wrap
