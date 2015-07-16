@@ -1,0 +1,98 @@
+@import "../../helpers/*"
+
+.recommend
+  position relative
+  .slick-arrow
+    clearbutton()
+    position absolute
+    top 50%
+    font-size 0
+    width 30px
+    height 30px
+    line-height 30px
+    text-align center
+    cursor pointer
+    margin-top -15px
+    transform scale(1, 1)
+    transition transform .25s
+    &:hover
+      transform scale(.8, .8)
+    &.slick-next
+      left 100%
+      &:after
+        icon('\e802')
+        font-size 18px
+        color $green
+    &.slick-prev
+      right 100%
+      &:after
+        icon('\e801')
+        font-size 18px
+        color $green
+  img.recommend__photo
+    vertical-align middle
+    display inline-block
+    max-width 100%
+    max-height 100%
+  &__photo
+    &-wrapper
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      width 130px
+      line-height 190px
+      text-align center
+  &__abstract
+    font-size 14px
+    line-height 17px
+    color $mid-grey
+    min-height 68px
+  &__price
+    margin 10px 0 0
+    padding 10px 0 0
+    border-top 1px solid $darker-white
+    font-size 13px
+    line-height 17px
+    white-space nowrap
+    color $black
+    strong
+      font-weight bold
+      font-size 26px
+      line-height 30px
+  &__details
+    padding 30px 20px 0 0
+  &__title
+    font-size 18px
+    line-height 30px
+    font-weight bold
+    padding 10px 0
+    width 845px
+    margin 0 auto
+    text-transform uppercase
+  &__list
+    white-space nowrap
+    font-size 0
+    overflow hidden
+    width 845px
+    margin 0 auto
+    &.slick-slider
+      overflow visible
+  &__item
+    white-space normal
+    text-decoration none
+    background-color $light-grey
+    width 145px
+    height 190px
+    margin 0 10px 0 0
+    display inline-block
+    vertical-align top
+    position relative
+    padding 0 0 0 130px
+    color $black
+    transform scale(1, 1)
+    opacity 1
+    transition transform .25s, opacity .25s
+    &:hover
+      transform scale(.9, .9)
+      opacity .6

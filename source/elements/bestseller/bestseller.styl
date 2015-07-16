@@ -25,11 +25,18 @@
     &:hover
       transform scale(.9, .9)
       background-color rgba($green, 1)
+      color $white
 
   .slick-next
     right 10px
+    &:after
+      icon('\e802')
+      font-size 18px
   .slick-prev
     left 10px
+    &:after
+      icon('\e801')
+      font-size 18px
   &__wrapper
     white-space nowrap
     font-size 0
