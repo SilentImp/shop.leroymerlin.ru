@@ -49,9 +49,19 @@ var Item,
 Item = (function() {
   function Item() {
     this.size = bind(this.size, this);
+    var i, len, ref, scroll;
     this.list = $('.item__list');
     this.items = this.list.find('.item');
     this.links = this.list.find('.item__brief');
+    this.wrappers = $('.item__full-statistics');
+    ref = this.wrappers;
+    for (i = 0, len = ref.length; i < len; i++) {
+      scroll = ref[i];
+      new IScroll(scroll, {
+        mouseWheel: true,
+        scrollbars: 'custom'
+      });
+    }
     this.list.isotope({
       itemSelector: '.item',
       layoutMode: 'packery',
