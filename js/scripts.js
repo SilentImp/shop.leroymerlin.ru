@@ -60,6 +60,8 @@ Item = (function() {
       scroll = ref[i];
       new IScroll(scroll, {
         mouseWheel: true,
+        interactiveScrollbars: true,
+        keyBindings: true,
         scrollbars: 'custom'
       });
     }
