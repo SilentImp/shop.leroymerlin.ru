@@ -49,6 +49,7 @@ var Item,
 Item = (function() {
   function Item() {
     this.size = bind(this.size, this);
+    this.saveItem = bind(this.saveItem, this);
     var i, len, ref, scroll;
     this.list = $('.item__list');
     this.items = this.list.find('.item');
@@ -66,11 +67,24 @@ Item = (function() {
       itemSelector: '.item',
       layoutMode: 'packery',
       packery: {
-        gutter: 10
+        gutter: 0
       }
     });
     this.links.on('click', this.size);
+    $('.item__save').on('click', this.saveItem);
   }
+
+  Item.prototype.saveItem = function(event) {
+    var link;
+    event.preventDefault();
+    link = $(event.currentTarget);
+    if (link.hasClass('item__save_saved')) {
+      link.text('В список покупок');
+    } else {
+      link.text('В списке (' + Math.round(Math.random() * 400) + ')');
+    }
+    return link.toggleClass('item__save_saved');
+  };
 
   Item.prototype.size = function(event) {
     var block, link;

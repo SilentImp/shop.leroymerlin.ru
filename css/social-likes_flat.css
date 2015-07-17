@@ -115,30 +115,39 @@
     font-style: normal
 }
 .social-likes__icon_facebook:before {
+  color: #fff;
     content: "\f101"
 }
 .social-likes__icon_github:before {
+  color: #fff;
     content: "\f102"
 }
 .social-likes__icon_mailru:before {
+  color: #fff;
     content: "\f103"
 }
 .social-likes__icon_odnoklassniki:before {
+  color: #fff;
     content: "\f104"
 }
 .social-likes__icon_pinterest:before {
+  color: #fff;
     content: "\f105"
 }
 .social-likes__icon_plusone:before {
+  color: #fff;
     content: "\f106"
 }
 .social-likes__icon_single:before {
+  color: #fff;
     content: "\f107"
 }
 .social-likes__icon_twitter:before {
+  color: #fff;
     content: "\f108"
 }
 .social-likes__icon_vkontakte:before {
+  color: #fff;
     content: "\f109"
 }
 .social-likes {
@@ -170,7 +179,7 @@
     color: #fff
 }
 .social-likes__button {
-    padding: 0 5px 0 48px;
+    padding: 0 10px 0 48px;
     height: 28px;
     line-height: 28px;
     font-weight: 700;
@@ -306,6 +315,7 @@
     /*background: #3d5b95*/
     background: #f1f1f1;
     box-shadow: inset 36px 0 0 0 #3d5b95;
+    color: #3d5b95;
 }
 
 .social-likes_light .social-likes__button_facebook {
@@ -373,6 +383,7 @@
     /*background: #3d5b95*/
     background: #f1f1f1;
     box-shadow: inset 36px 0 0 0 #587e9f;
+    color: #587e9f;
 }
 
 /*.social-likes__widget_vkontakte {
@@ -400,6 +411,7 @@
     /*background: #3d5b95*/
     background: #f1f1f1;
     box-shadow: inset 36px 0 0 0 #f2720c;
+    color: #f2720c;
 }
 
 .social-likes_light .social-likes__button_odnoklassniki {
