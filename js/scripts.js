@@ -59,6 +59,8 @@ Item = (function() {
     for (i = 0, len = ref.length; i < len; i++) {
       scroll = ref[i];
       new IScroll(scroll, {
+        momentum: false,
+        click: true,
         mouseWheel: true,
         interactiveScrollbars: true,
         keyBindings: true,
