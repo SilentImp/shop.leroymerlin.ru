@@ -12,9 +12,21 @@ class Item
       itemSelector: '.item'
       layoutMode: 'packery'
       packery:
-        gutter: 10
+        gutter: 0
 
     @links.on 'click', @size
+    $('.item__save').on 'click', @saveItem
+
+  saveItem: (event)=>
+    event.preventDefault()
+    link = $ event.currentTarget
+
+    if link.hasClass 'item__save_saved'
+      link.text 'В список покупок'
+    else
+      link.text 'В списке ('+Math.round(Math.random()*400)+')'
+
+    link.toggleClass 'item__save_saved'
 
   size: (event)=>
     event.preventDefault()
