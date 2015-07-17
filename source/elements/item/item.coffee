@@ -7,6 +7,8 @@ class Item
     for scroll in @wrappers
       new IScroll scroll,
         mouseWheel: true
+        interactiveScrollbars: true
+        keyBindings: true
         scrollbars: 'custom'
     @list.isotope
       itemSelector: '.item'
