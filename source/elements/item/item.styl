@@ -8,12 +8,100 @@
   position relative
   margin 0 12px 10px 0
   float left
-  overflow hidden
   color $black
+  background $white
 
-  &:hover .item__brief
-    transform scale(.9, .9)
-    opacity .65
+  &:hover
+    z-index 100
+    .item__additional
+      display block
+    .item__brief
+      padding 20px 20px 0
+      height 359px
+      z-index 102
+
+  &__available
+    font-size 13px
+    padding 0 0 0 35px
+    line-height 30px
+    margin 0 0 20px
+    display inline-block
+    color $grey
+    text-decoration none
+    background: url("../images/card.png") 5px 50% no-repeat;
+    strong
+      color $black
+      font-weight bold
+      white-space nowrap
+
+  &__available-in-the-city
+    font-size 13px
+    line-height 15px
+    padding 0
+    white-space nowrap
+    display inline-block
+    margin 0 0 30px 35px
+    color $black
+    text-decoration none
+    border-bottom 1px dotted $black
+    position relative
+    &:before
+      content ""
+      width 35px
+      height 15px
+      right 100%
+      top 0
+      background: url("../images/count.svg") 0 50% no-repeat;
+      background-size auto 28px
+      display block
+      overflow hidden
+      position absolute
+    &:hover
+      border-color transparent
+
+  &__send-me-email
+    background-color $yellow
+    font-size 15px
+    line-height 32px
+    text-align center
+    display block
+    text-decoration none
+    border-radius 3px
+    color $black
+    margin -20px 0 30px
+    z-index 123
+    position relative
+    transition background-color .25s
+    &:hover
+      background-color $orange
+
+  &__compare
+    padding 0 0 0 35px
+    margin 0 20px 0 0
+    font-size 14px
+    line-height 32px
+    text-decoration none
+    background url("../images/compare.svg") 2px 50% no-repeat
+    background-size auto 24px
+    &:hover
+      text-decoration underline
+
+  &__additional
+    display none
+    position absolute
+    top 0
+    left 0
+    right 0
+
+    box-shadow 0 0 16px 0 rgba(#000, .1)
+
+    background-color $white
+    border solid $green
+    border-width 0 1px 1px
+
+    padding 380px 10px 20px
+
+    z-index 101
 
   &__statistics
     border-top 1px solid $mid-white
@@ -46,6 +134,9 @@
   &_open
     width 905px
     height 770px
+    &:hover .item__additional,
+    .item__additional
+      display none
     .item__brief
       opacity 0
       pointer-events none
@@ -152,7 +243,9 @@
       font-weight bold
 
   &__save
+    white-space nowrap
     text-decoration none
+    font-size 14px
     &:hover
       text-decoration underline
     &:before
@@ -274,7 +367,6 @@
     width 295px
     height 379px
     border-top 1px solid $black
-    background $white
     padding 20px
     box-sizing border-box
 

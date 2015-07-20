@@ -6,6 +6,8 @@ class Item
     @wrappers = $ '.item__full-statistics'
     for scroll in @wrappers
       new IScroll scroll,
+        momentum: false
+        click: true
         mouseWheel: true
         interactiveScrollbars: true
         keyBindings: true
